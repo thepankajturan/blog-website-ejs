@@ -1,0 +1,14 @@
+<%- include('header') %>
+<h1>Compose a Post</h1>
+<form action="/compose" method="post">
+  <label for="title">Title</label>
+  <input placeholder="Title of post..." style="display: block;" type="text" name="title" id="body" />
+  <br>
+  <label for="post">Post</label>
+  <textarea style="display: block;" placeholder="Enter the body of post..." name="post" id="post" cols="30" rows="10">
+</textarea
+  >
+  <br>
+  <button class="btn" type="submit">Publish</button>
+</form>
+<%- include('footer') %>

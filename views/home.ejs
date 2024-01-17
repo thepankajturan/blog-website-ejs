@@ -1,0 +1,14 @@
+<%- include('header') %>
+<h1>Home</h1>
+<p><%= homeStartingContent %></p>
+
+<% postArr.forEach(element => {  %>
+    <% const title = element.title %>
+    <% const post = element.post %>
+    <h3><%= title %></h3>
+    <p id="truncate-text"><%= post.substring(0, 100) + "..." %>
+        <%  const url = title.replace(/([a-z])([A-Z])/g, "$1-$2").replace(/[\s_]+/g, '-').toLowerCase();  %>
+        <a href="/posts/<%= url %>">Read More</a></p>
+    <% }); %>
+
+<%- include('footer') %>
